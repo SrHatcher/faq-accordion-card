@@ -5,10 +5,12 @@ const answers = document.querySelectorAll('.answer')
 questions.forEach((question, i)=>{
     questions[i].addEventListener("click", ()=>{
         answers.forEach((answer, j)=>{
-            answers[j].classList.remove("text--show")
-            answers[j].classList.add("text--hide")
-            questions[j].classList.remove("active--heading")
-            arrows[j].classList.remove("arrow--up")
+            if(j != i){
+                answers[j].classList.remove("text--show")
+                answers[j].classList.add("text--hide")
+                questions[j].classList.remove("active--heading")
+                arrows[j].classList.remove("arrow--up")
+            }
         })
 
         answers[i].classList.toggle("text--hide")
@@ -21,10 +23,12 @@ questions.forEach((question, i)=>{
 arrows.forEach((arrow, i)=>{
     arrows[i].addEventListener("click", ()=>{
         answers.forEach((answer, j)=>{
-            answers[j].classList.remove("text--show")
-            answers[j].classList.add("text--hide")
-            questions[j].classList.remove("active--heading")
-            arrows[j].classList.remove("arrow--up")
+            if(j != i){
+                answers[j].classList.remove("text--show")
+                answers[j].classList.add("text--hide")
+                questions[j].classList.remove("active--heading")
+                arrows[j].classList.remove("arrow--up")
+            }
         })
 
         answers[i].classList.toggle("text--hide")

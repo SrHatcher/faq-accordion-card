@@ -80,6 +80,10 @@ main{
     background-repeat: no-repeat;
 }
 
+.img_container__box{
+    display: none;
+}
+
 /*-------------------------- Modifiers  ---------------------------------*/
 
 .text--hide{
@@ -107,6 +111,8 @@ main{
 /* ------------------------ End of modifiers ---------------------------*/ 
 
 h1{
+    margin-block-end: 2rem;
+
     font-size: 3.6rem;
     text-align: center;
 
@@ -114,7 +120,6 @@ h1{
 }
 
 .faq_questions{
-    margin-top: 2.5rem;
     margin-bottom: 4.5rem;
 }
 
@@ -160,6 +165,90 @@ h1{
     background-position: center;
     transition: all 0.2s;
     cursor: pointer;
+}
+
+@media screen and (min-width: 1200px){
+    main{
+        display: flex;
+        flex-direction: row;
+    
+        min-height: 60rem;
+        height: 60rem;
+        min-width: 100rem;
+        width: 110rem;
+        padding: 0 0rem;
+        margin-top: 0rem;
+    
+        font-family: var(--font);
+    
+        background-color: white;
+        border-radius: 2.5rem;
+        box-shadow: 0 2rem 3rem 1rem rgba(0, 0, 0, 0.336) ;
+    }
+
+    .img_container{
+        position: relative;
+        display: flex;
+        justify-content: none;
+        align-items: center;
+
+        height: 100%;
+        width: 50%;
+    }
+
+    .img_container img, picture{
+        margin-top: 0;
+        margin-left: -5rem;
+        width: 100%;
+
+        z-index: 1;
+    }
+
+    .img_container__shadow{
+        position: absolute;
+        bottom: 0;
+        left: -7rem;
+        display: block;
+    
+        width: 100%;
+        height:auto;
+    
+    
+        background-image: url("./images/bg-pattern-desktop.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+    }
+
+    .img_container__box{
+        position: absolute;
+        left: -8.5rem;
+        top: 25rem;
+        display: block;
+
+        width: 20rem;
+        height: 20rem;
+
+        background-image: url("./images/illustration-box-desktop.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+
+    .faq_questions{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        height: 100%;
+        width: 50%;
+        padding-inline-end: 13rem;
+        margin-bottom: 0;
+    }
+
+    h1{
+        text-align: left;
+    }
 }
 
 
