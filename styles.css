@@ -113,11 +113,12 @@ h1{
     color: var(--active-heading-color);
 }
 
-.faq_container{
+.faq_questions{
     margin-top: 2.5rem;
+    margin-bottom: 4.5rem;
 }
 
-.faq__question{
+.question__container{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -130,25 +131,40 @@ h1{
     border-bottom: 0.1rem solid var(--dividers);
 }
 
-.faq__question > div {
+.question__container > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    height: 5rem;
     height: 5rem;
     width: 100%;
 
     color: var(--heading-color);
 }
 
+.question{
+    cursor: pointer;
+    transition: all  0.2s;
+}
+
 .arrow{
     display: inline-block;
 
-    width: 1rem;
-    height: 1rem;
+    width: 2rem;
+    height: 2rem;
 
     background-image: url("./images/icon-arrow-down.svg");
     background-size: 1rem;
     background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.2s;
+    cursor: pointer;
 }
 
+
+@media (hover:hover){
+    .question:hover{
+        color: var(--active-color);
+    }
+}
